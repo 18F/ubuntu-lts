@@ -27,7 +27,7 @@ end
 
 ###
 # /etc/modprobe.d Safe Defaults
-# See https://github.com/18F/ubuntu/blob/master/hardening.md
+# See https://github.com/18F/ubuntu-lts/blob/master/hardening.md
 ###
 cookbook_file "/etc/modprobe.d/18Fhardened.conf" do
   source "etc/modprobe.d/18Fhardened.conf"
@@ -39,7 +39,7 @@ end
 
 ###
 # Redirect protections
-# See https://github.com/18F/ubuntu/blob/master/hardening.md#redirect-protections
+# See https://github.com/18F/ubuntu-lts/blob/master/hardening.md#redirect-protections
 ###
 icmp_settings = [
   "net.ipv4.conf.default.rp_filter=1",
@@ -78,7 +78,7 @@ end
 
 ###
 # Audit Strategy!
-# See https://github.com/18F/ubuntu/blob/master/hardening.md#audit-strategy
+# See https://github.com/18F/ubuntu-lts/blob/master/hardening.md#audit-strategy
 ###
 
 # Time and Space
@@ -98,7 +98,7 @@ end
 
 ###
 # System Access, Authentication and Authorization
-# See https://github.com/18F/ubuntu/blob/master/hardening.md#system-access-authentication-and-authorization
+# See https://github.com/18F/ubuntu-lts/blob/master/hardening.md#system-access-authentication-and-authorization
 ###
 file "/etc/at.deny" do
   action :delete
@@ -139,7 +139,7 @@ end
 
 ###
 # Password Policy
-# See https://github.com/18F/ubuntu/blob/master/hardening.md#password-policy
+# See https://github.com/18F/ubuntu-lts/blob/master/hardening.md#password-policy
 ###
 package "libpam-cracklib" do
   action :install
@@ -165,7 +165,7 @@ end
 
 ###
 # SSH Settings
-# See https://github.com/18F/ubuntu/blob/master/hardening.md#ssh-settings
+# See https://github.com/18F/ubuntu-lts/blob/master/hardening.md#ssh-settings
 ###
 cookbook_file "/etc/ssh/sshd_config" do
   source "etc/ssh/sshd_config"
@@ -176,7 +176,7 @@ end
 
 ###
 # Get some banners up and running!
-# See https://github.com/18F/ubuntu/blob/master/hardening.md#ssh-settings
+# See https://github.com/18F/ubuntu-lts/blob/master/hardening.md#ssh-settings
 ###
 cookbook_file "/etc/update-motd.d/00-header" do
   source "etc/update-motd.d/00-header"
